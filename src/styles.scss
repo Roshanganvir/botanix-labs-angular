@@ -1,0 +1,130 @@
+/* ===================== DESIGN TOKENS ===================== */
+:root {
+  --ink: #12161B;
+  --ink-soft: #2B3440;
+  --steel: #33526B;
+  --steel-deep: #223342;
+  --paper: #E9EAE6;
+  --paper-dim: #DCDED9;
+  --amber: #D98E2B;
+  --amber-deep: #B8721C;
+  --line: rgba(43, 52, 64, 0.14);
+  --line-strong: rgba(43, 52, 64, 0.28);
+  --muted: #5C6470;
+  --white: #FDFDFC;
+  --radius: 2px;
+  --maxw: 1180px;
+}
+
+/* ===================== RESET ===================== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+p { margin: 0; color: var(--muted); line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+
+/* ===================== SHARED LAYOUT UTILITIES ===================== */
+/* These are used across almost every section component, so they live
+   globally instead of being duplicated in each component stylesheet. */
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--amber-deep);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--amber-deep); display: inline-block; }
+
+.section { padding: 120px 0; }
+.section-tight { padding: 80px 0; }
+.section-head { max-width: 640px; margin-bottom: 64px; }
+.section-head h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.1; }
+.section-head p { margin-top: 18px; font-size: 16px; }
+
+.dark-section { background: var(--ink); color: var(--white); }
+.dark-section h2, .dark-section h3, .dark-section h4 { color: var(--white); }
+.dark-section .eyebrow { color: var(--amber); }
+.dark-section .eyebrow::before { background: var(--amber); }
+.dark-section p { color: #AEB4BC; }
+
+.icon-box { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.25); }
+.icon-box svg { width: 22px; height: 22px; stroke: var(--amber); fill: none; stroke-width: 1.4; }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 26px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--ink); color: var(--white); }
+.btn-primary:hover { background: var(--amber-deep); }
+.btn-outline { border-color: var(--line-strong); color: var(--ink); }
+.btn-outline:hover { border-color: var(--ink); background: var(--ink); color: var(--white); }
+.btn-amber { background: var(--amber); color: var(--ink); }
+.btn-amber:hover { background: var(--amber-deep); color: var(--white); }
+.btn-arrow { transition: transform .25s ease; }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
+/* corner-bracket "drawing frame" signature, used by the hero visual */
+.frame { position: relative; }
+.frame::before, .frame::after, .frame > .fc1, .frame > .fc2 {
+  content: ""; position: absolute; width: 18px; height: 18px;
+  border: 2px solid var(--amber); pointer-events: none;
+}
+.frame::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+.frame::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+.frame .fc1 { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+.frame .fc2 { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+
+/* ===================== SCROLL-REVEAL (used with the appReveal directive) ===================== */
+[appReveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+[appReveal].in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== RESPONSIVE SECTION PADDING ===================== */
+@media (max-width: 720px) {
+  .section { padding: 80px 0; }
+}

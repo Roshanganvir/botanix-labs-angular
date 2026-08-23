@@ -1,0 +1,87 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Automated assembly fixture illustration</title>
+<desc>Isometric 3D illustration of a robotic assembly fixture with amber and teal accents</desc>
+<defs>
+  <linearGradient id="bgGrad1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a1a1a"/>
+    <stop offset="100%" stop-color="#0d0d0d"/>
+  </linearGradient>
+  <linearGradient id="baseTop" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#3a3a3a"/>
+    <stop offset="100%" stop-color="#2a2a2a"/>
+  </linearGradient>
+  <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffb84d"/>
+    <stop offset="100%" stop-color="#e8912a"/>
+  </linearGradient>
+  <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#4ddbc4"/>
+    <stop offset="100%" stop-color="#2aa38f"/>
+  </linearGradient>
+</defs>
+
+<rect width="800" height="600" fill="url(#bgGrad1)"/>
+
+<!-- floor grid -->
+<g opacity="0.15" stroke="#ffffff" stroke-width="1">
+  <path d="M100 480 L400 620 L700 480 L400 340 Z" fill="none"/>
+  <path d="M180 500 L400 600" fill="none"/>
+  <path d="M260 480 L400 550" fill="none"/>
+  <path d="M340 460 L400 500" fill="none"/>
+  <path d="M460 460 L400 500" fill="none"/>
+  <path d="M540 480 L400 550" fill="none"/>
+  <path d="M620 500 L400 600" fill="none"/>
+</g>
+
+<!-- base platform (isometric box) -->
+<g>
+  <polygon points="250,420 400,480 550,420 400,360" fill="url(#baseTop)"/>
+  <polygon points="250,420 400,480 400,530 250,470" fill="#1f1f1f"/>
+  <polygon points="550,420 400,480 400,530 550,470" fill="#262626"/>
+</g>
+
+<!-- central column -->
+<g>
+  <polygon points="380,180 420,180 420,370 380,370" fill="#333333"/>
+  <polygon points="360,180 380,180 380,370 360,370" fill="#252525"/>
+  <polygon points="380,180 420,180 400,160 360,160" fill="#3f3f3f"/>
+</g>
+
+<!-- amber fixture arm -->
+<g>
+  <polygon points="400,220 560,180 600,200 440,240" fill="url(#amberGrad)"/>
+  <polygon points="560,180 600,200 600,240 560,220" fill="#c97a1f"/>
+  <polygon points="440,240 600,200 600,240 440,280" fill="#d98a24"/>
+</g>
+
+<!-- teal fixture arm -->
+<g>
+  <polygon points="400,280 240,250 200,270 360,300" fill="url(#tealGrad)"/>
+  <polygon points="240,250 200,270 200,310 240,290" fill="#1f8a76"/>
+  <polygon points="360,300 200,310 200,270 360,260" fill="#249082"/>
+</g>
+
+<!-- clamp jaws (amber) -->
+<g>
+  <rect x="580" y="185" width="14" height="60" rx="2" fill="#ffb84d"/>
+  <rect x="602" y="195" width="14" height="45" rx="2" fill="#e8912a"/>
+</g>
+
+<!-- clamp jaws (teal) -->
+<g>
+  <rect x="188" y="255" width="14" height="55" rx="2" fill="#4ddbc4"/>
+  <rect x="166" y="265" width="14" height="40" rx="2" fill="#2aa38f"/>
+</g>
+
+<!-- top sensor block -->
+<g>
+  <polygon points="370,140 410,140 430,150 390,150" fill="#4ddbc4"/>
+  <polygon points="370,140 390,150 390,165 370,155" fill="#2aa38f"/>
+  <polygon points="390,150 430,150 430,165 390,165" fill="#3ac0a9"/>
+</g>
+
+<!-- bolt highlights on base -->
+<circle cx="320" cy="430" r="5" fill="#ffb84d" opacity="0.9"/>
+<circle cx="480" cy="430" r="5" fill="#4ddbc4" opacity="0.9"/>
+<circle cx="400" cy="470" r="5" fill="#ffb84d" opacity="0.9"/>
+</svg>

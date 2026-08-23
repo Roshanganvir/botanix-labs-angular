@@ -1,0 +1,27 @@
+<section class="section dark-section" id="about">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">§ 05 — Success Stories</span>
+      <h2>Projects we're proud to have delivered</h2>
+      <p>A look at some of the engineering challenges we've helped our clients solve from concept design to production ready documentation.</p>
+    </div>
+
+    <div class="case-grid" appReveal>
+      <div class="case-card" *ngFor="let item of caseStudies">
+        <div class="case-image" [style.background-image]="'url(' + item.image + ')'"></div>
+        <div class="case-body">
+          <span class="mono">{{ item.tag }}</span>
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.desc }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar-list" appReveal>
+      <div class="pillar" *ngFor="let p of pillars">
+        <span class="mono">{{ p.label }}</span>
+        <div><h4>{{ p.title }}</h4></div>
+      </div>
+    </div>
+  </div>
+</section>

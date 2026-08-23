@@ -1,0 +1,22 @@
+<header [class.scrolled]="scrolled">
+  <div class="nav-row wrap">
+    <a href="#home" class="logo">
+      <img src="assets/logo.png" alt="Botanix Labs logo" class="logo-mark" />
+      BOTANIX LABS
+    </a>
+    <nav class="primary-nav" [class.open]="navOpen">
+      <a href="#home" (click)="closeNav()">Home</a>
+      <a href="#services" (click)="closeNav()">Services</a>
+      <a href="#industries" (click)="closeNav()">Industries</a>
+      <a href="#process" (click)="closeNav()">Vision</a>
+      <a href="#faqs" (click)="closeNav()">FAQs</a>
+      <a href="#contact" (click)="closeNav()">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-primary">Post Your Requirement</a>
+      <button class="burger" aria-label="Menu" (click)="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

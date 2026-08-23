@@ -1,0 +1,61 @@
+.team-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--ink, #141414);
+  transition: border-color 0.25s ease;
+}
+
+.team-card:hover {
+  border-color: var(--amber);
+}
+
+.team-image {
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  filter: grayscale(15%);
+  transition: filter 0.25s ease, transform 0.4s ease;
+}
+
+.team-card:hover .team-image {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+.team-body {
+  padding: 22px 24px 26px;
+}
+
+.team-body h4 {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.team-body .mono {
+  color: var(--amber);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

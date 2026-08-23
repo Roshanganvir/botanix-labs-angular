@@ -1,0 +1,19 @@
+<section class="section dark-section" id="team">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="justify-content:center;">§ 06 — Our People</span>
+      <h2>Our Team</h2>
+      <p>The engineers and managers behind every project — from first concept to final documentation.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card" *ngFor="let member of team">
+        <div class="team-image" [style.background-image]="'url(' + member.image + ')'"></div>
+        <div class="team-body">
+          <h4>{{ member.name }}</h4>
+          <span class="mono">{{ member.role }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

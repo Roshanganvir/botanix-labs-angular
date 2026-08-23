@@ -1,0 +1,36 @@
+.contact-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; }
+
+.contact-info-item { display: flex; gap: 16px; padding: 22px 0; border-top: 1px solid var(--line); }
+.contact-info-item:last-child { border-bottom: 1px solid var(--line); }
+.contact-info-item .icon-box { border-color: var(--line-strong); flex-shrink: 0; }
+.contact-info-item .icon-box svg { stroke: var(--amber-deep); }
+.contact-info-item h4 { font-size: 14.5px; margin-bottom: 4px; }
+.contact-info-item p { font-size: 14px; }
+
+form.contact-form { display: grid; gap: 18px; background: var(--white); border: 1px solid var(--line-strong); padding: 40px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field label {
+  display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
+}
+.field input, .field textarea {
+  width: 100%; border: 1px solid var(--line-strong); background: transparent; padding: 13px 14px;
+  font-family: 'Inter', sans-serif; font-size: 14.5px; color: var(--ink); border-radius: var(--radius);
+}
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--amber-deep); }
+.field textarea { resize: vertical; min-height: 110px; }
+.submit-btn { justify-self: start; }
+.submit-btn:disabled { opacity: .6; cursor: not-allowed; }
+.form-msg { color: var(--amber-deep); }
+.form-error { color: #C24A3B; }
+
+.quick-actions { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+.btn-whatsapp { display: inline-flex; align-items: center; gap: 8px; }
+.wa-icon { width: 15px; height: 15px; color: #25D366; flex-shrink: 0; }
+
+@media (max-width: 980px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 44px; }
+}
+@media (max-width: 720px) {
+  .form-row { grid-template-columns: 1fr; }
+}

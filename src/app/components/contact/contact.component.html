@@ -1,0 +1,57 @@
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">§ 09 — Contact</span>
+      <h2>Post your requirement</h2>
+      <p>Share your project details and we'll respond within 48 hours.</p>
+    </div>
+    <div class="contact-layout">
+      <div appReveal>
+        <div class="contact-info-item">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></div>
+          <div><h4>Email</h4><p>info&#64;botanixlabs.in</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L7.9 9.7a16 16 0 006.4 6.4l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/></svg></div>
+          <div><h4>Phone</h4><p>+91-8483051756</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>Location</h4><p>Maharashtra, India</p></div>
+        </div>
+
+        
+      </div>
+      <form class="contact-form" appReveal (ngSubmit)="submitForm()" #contactForm="ngForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">First Name *</label>
+            <input id="name" type="text" name="name" placeholder="John Doe" [(ngModel)]="form.name" required>
+          </div>
+          <div class="field">
+            <label for="location">Location</label>
+            <input id="location" type="text" name="location" placeholder="City, Country" [(ngModel)]="form.location">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" type="email" name="email" placeholder="you&#64;company.com" [(ngModel)]="form.email" required>
+          </div>
+          <div class="field">
+            <label for="mobile">Mobile Number *</label>
+            <input id="mobile" type="tel" name="mobile" placeholder="+91 98765 43210" [(ngModel)]="form.mobile" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us briefly about your project or requirement..." [(ngModel)]="form.message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn" [disabled]="sending">
+          {{ sending ? 'Sending…' : 'Send Enquiry →' }}
+        </button>
+        <p class="form-msg mono" *ngIf="formSubmitted">Thanks — your enquiry has been sent. We'll respond within 48 hours.</p>
+<p class="form-msg form-error mono" *ngIf="formError">{{ errorMessage || 'Something went wrong sending that — please try WhatsApp or Call Us instead.' }}</p>      </form>
+    </div>
+  </div>
+</section>

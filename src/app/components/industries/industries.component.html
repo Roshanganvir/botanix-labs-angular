@@ -1,0 +1,21 @@
+<section class="section dark-section" id="industries">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">§ 02 — Industries</span>
+      <h2>Trusted by manufacturers across the globe</h2>
+      <p>We deliver precise, scalable and cost-effective mechanical design support, built around the constraints of your production line.</p>
+    </div>
+    <div class="industry-grid" appReveal>
+      <div class="industry-card" *ngFor="let ind of industries">
+        <div class="icon-box" [ngSwitch]="ind.icon">
+          <svg *ngSwitchCase="'industrial'" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12"/><path d="M7 8V5h10v3"/></svg>
+          <svg *ngSwitchCase="'automotive'" viewBox="0 0 24 24"><path d="M3 17h18M5 17V9l3-4h8l3 4v8"/><circle cx="7.5" cy="17" r="1.7"/><circle cx="16.5" cy="17" r="1.7"/></svg>
+          <svg *ngSwitchCase="'process'" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg>
+          <svg *ngSwitchCase="'consumer'" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
+        </div>
+        <h4>{{ ind.title }}</h4>
+        <p>{{ ind.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

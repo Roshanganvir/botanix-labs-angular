@@ -1,0 +1,20 @@
+<section class="section" id="faqs">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">§ 08 — Popular Questions</span>
+      <h2>Learn more about Botanix Labs</h2>
+      <p>We deliver precision engineering and CAD solutions worldwide. Here's what clients most often ask before starting a project.</p>
+    </div>
+    <div class="faq-list" appReveal>
+      <div class="faq-item" *ngFor="let f of faqs" [class.open]="f.open">
+        <button class="faq-question" (click)="toggleFaq(f)">
+          <span>{{ f.question }}</span>
+          <span class="faq-toggle">{{ f.open ? '−' : '+' }}</span>
+        </button>
+        <div class="faq-answer" *ngIf="f.open">
+          <p>{{ f.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

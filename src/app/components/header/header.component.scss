@@ -1,0 +1,46 @@
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(233, 234, 230, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  transition: padding .25s ease, background .25s ease;
+}
+.nav-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 32px;
+  transition: padding .25s ease;
+}
+header.scrolled .nav-row { padding: 13px 32px; }
+header.scrolled { background: rgba(233, 234, 230, 0.97); box-shadow: 0 1px 0 var(--line-strong); }
+
+.logo { display: flex; align-items: center; gap: 11px; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 0.02em; }
+.logo-mark { width: 46px; height: 46px; flex-shrink: 0; object-fit: contain; }
+
+nav.primary-nav { display: flex; align-items: center; gap: 34px; }
+nav.primary-nav a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink-soft);
+  position: relative; padding: 4px 0;
+}
+nav.primary-nav a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--amber-deep);
+  transition: width .25s ease;
+}
+nav.primary-nav a:hover::after { width: 100%; }
+
+.nav-actions { display: flex; align-items: center; gap: 18px; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+.burger span { width: 22px; height: 2px; background: var(--ink); display: block; }
+
+@media (max-width: 720px) {
+  nav.primary-nav {
+    position: fixed; top: 0; right: 0; height: 100vh; width: 78%; max-width: 320px;
+    background: var(--ink); flex-direction: column; align-items: flex-start; justify-content: center;
+    gap: 30px; padding: 40px; transform: translateX(100%); transition: transform .3s ease; z-index: 99;
+  }
+  nav.primary-nav.open { transform: translateX(0); }
+  nav.primary-nav a { color: var(--white); font-size: 15px; }
+  .burger { display: flex; }
+  .nav-actions .btn-primary { display: none; }
+}

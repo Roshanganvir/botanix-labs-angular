@@ -1,0 +1,80 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Conveyor system redesign illustration</title>
+<desc>Isometric 3D illustration of a factory conveyor belt line with amber crates and teal safety guards</desc>
+<defs>
+  <linearGradient id="bgGrad2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#171b1e"/>
+    <stop offset="100%" stop-color="#0b0d0e"/>
+  </linearGradient>
+  <linearGradient id="railGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#3a3a3a"/>
+    <stop offset="100%" stop-color="#242424"/>
+  </linearGradient>
+  <linearGradient id="beltGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#2f2f2f"/>
+    <stop offset="100%" stop-color="#1c1c1c"/>
+  </linearGradient>
+  <linearGradient id="crateGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffb84d"/>
+    <stop offset="100%" stop-color="#e07a1f"/>
+  </linearGradient>
+</defs>
+
+<rect width="800" height="600" fill="url(#bgGrad2)"/>
+
+<!-- conveyor rail structure running diagonally -->
+<g>
+  <polygon points="100,420 700,220 730,232 130,432" fill="url(#railGrad)"/>
+  <polygon points="100,420 130,432 130,460 100,448" fill="#1a1a1a"/>
+  <polygon points="700,220 730,232 730,260 700,248" fill="#1a1a1a"/>
+  <polygon points="130,432 730,232 730,260 130,460" fill="url(#beltGrad)"/>
+</g>
+
+<!-- belt tread lines -->
+<g stroke="#0f0f0f" stroke-width="3" opacity="0.6">
+  <line x1="180" y1="435" x2="200" y2="380"/>
+  <line x1="260" y1="405" x2="280" y2="350"/>
+  <line x1="340" y1="378" x2="360" y2="322"/>
+  <line x1="420" y1="350" x2="440" y2="294"/>
+  <line x1="500" y1="320" x2="520" y2="266"/>
+  <line x1="580" y1="292" x2="600" y2="238"/>
+</g>
+
+<!-- support legs -->
+<g fill="#2a2a2a">
+  <rect x="150" y="446" width="10" height="90"/>
+  <rect x="320" y="392" width="10" height="90"/>
+  <rect x="490" y="336" width="10" height="90"/>
+  <rect x="660" y="272" width="10" height="90"/>
+</g>
+
+<!-- teal safety guard rails -->
+<g stroke="#4ddbc4" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9">
+  <line x1="140" y1="410" x2="710" y2="212"/>
+</g>
+<g fill="#2aa38f">
+  <rect x="200" y="380" width="7" height="34" transform="rotate(-19 200 380)"/>
+  <rect x="380" y="316" width="7" height="34" transform="rotate(-19 380 316)"/>
+  <rect x="560" y="252" width="7" height="34" transform="rotate(-19 560 252)"/>
+</g>
+
+<!-- crates on belt -->
+<g>
+  <polygon points="230,390 262,378 282,390 250,402" fill="url(#crateGrad)"/>
+  <polygon points="230,390 250,402 250,422 230,410" fill="#c9701c"/>
+  <polygon points="250,402 282,390 282,410 250,422" fill="#d9801f"/>
+</g>
+<g>
+  <polygon points="410,318 442,306 462,318 430,330" fill="url(#crateGrad)"/>
+  <polygon points="410,318 430,330 430,350 410,338" fill="#c9701c"/>
+  <polygon points="430,330 462,318 462,338 430,350" fill="#d9801f"/>
+</g>
+<g>
+  <polygon points="560,264 592,252 612,264 580,276" fill="#4ddbc4"/>
+  <polygon points="560,264 580,276 580,296 560,284" fill="#238a78"/>
+  <polygon points="580,276 612,264 612,284 580,296" fill="#2aa38f"/>
+</g>
+
+<!-- floor shadow -->
+<ellipse cx="400" cy="560" rx="260" ry="20" fill="#000000" opacity="0.35"/>
+</svg>

@@ -1,0 +1,31 @@
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">§ 06 — What Drives Us</span>
+      <h2>Our Values</h2>
+      <p>The principles that guide every project, every partnership, and every decision we make.</p>
+    </div>
+
+    <div class="values-strip" appReveal>
+      <span class="value-chip" *ngFor="let value of values">{{ value }}</span>
+    </div>
+
+    <div class="mv-grid" appReveal>
+      <div class="mv-card" [style.background-image]="'url(' + mission.image + ')'">
+        <div class="mv-overlay">
+          <span class="mono">{{ mission.tag }}</span>
+          <h3>{{ mission.title }}</h3>
+          <p>{{ mission.desc }}</p>
+        </div>
+      </div>
+
+      <div class="mv-card" [style.background-image]="'url(' + vision.image + ')'">
+        <div class="mv-overlay">
+          <span class="mono">{{ vision.tag }}</span>
+          <h3>{{ vision.title }}</h3>
+          <p>{{ vision.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

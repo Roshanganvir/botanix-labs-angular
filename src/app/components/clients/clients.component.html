@@ -1,0 +1,15 @@
+<section class="section-tight" id="clients">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <!-- <span class="eyebrow">§ 03 — Our Clients</span> -->
+      <h2>Our Clients</h2>
+      <p>From local partners to international manufacturers, we deliver engineering excellence our clients rely on.</p>
+    </div>
+
+    <div class="client-grid" appReveal>
+      <div class="client-item" *ngFor="let client of clients">
+        <img [src]="client.logo" [alt]="client.name" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
