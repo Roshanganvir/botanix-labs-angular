@@ -1,11 +1,11 @@
-.faq-list { border-top: 1px solid var(--line-strong); }
-.faq-item { border-bottom: 1px solid var(--line-strong); }
-.faq-question {
-  width: 100%; display: flex; align-items: center; justify-content: space-between;
-  background: none; border: none; padding: 24px 4px; cursor: pointer; text-align: left;
-  font-family: 'Oswald', sans-serif; font-size: 16.5px; letter-spacing: 0.01em; color: var(--ink);
-}
-.faq-item.open .faq-question { color: var(--amber-deep); }
-.faq-toggle { font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: var(--amber-deep); flex-shrink: 0; margin-left: 20px; }
-.faq-answer { padding: 0 4px 24px; }
-.faq-answer p { font-size: 14.5px; max-width: 640px; }
+// .faq-list { border-top: 1px solid var(--line-strong); }
+// .faq-item { border-bottom: 1px solid var(--line-strong); }
+// .faq-question {
+//   width: 100%; display: flex; align-items: center; justify-content: space-between;
+//   background: none; border: none; padding: 24px 4px; cursor: pointer; text-align: left;
+//   font-family: 'Oswald', sans-serif; font-size: 16.5px; letter-spacing: 0.01em; color: var(--ink);
+// }
+// .faq-item.open .faq-question { color: var(--amber-deep); }
+// .faq-toggle { font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: var(--amber-deep); flex-shrink: 0; margin-left: 20px; }
+// .faq-answer { padding: 0 4px 24px; }
+// .faq-answer p { font-size: 14.5px; max-width: 640px; }

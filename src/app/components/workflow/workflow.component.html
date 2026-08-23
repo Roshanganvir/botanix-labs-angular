@@ -1,0 +1,19 @@
+<section class="section dark-section" id="workflow">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">§ 04 — Our Process</span>
+      <h2>From Engineering Backlog to Production-Ready Design</h2>
+      <p>A simple, transparent workflow that takes your project from first concept to full production support.</p>
+    </div>
+
+    <div class="workflow-track" appReveal>
+      <div class="workflow-step" *ngFor="let step of steps; let last = last" [class.no-line]="last">
+        <div class="step-marker">
+          <span class="step-number">{{ step.number }}</span>
+        </div>
+        <h4>{{ step.title }}</h4>
+        <p>{{ step.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

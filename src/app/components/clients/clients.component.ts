@@ -7,6 +7,13 @@ interface Client {
   logo: string;
 }
 
+interface ClientSpotlight {
+  name: string;
+  summary: string;
+  pains: string[];
+  solutions: string[];
+}
+
 @Component({
   selector: 'app-clients',
   standalone: true,
@@ -18,14 +25,31 @@ export class ClientsComponent {
   clients: Client[] = [
     { name: 'R&I Automation', logo: 'assets/clients/ri-automation.png' },
     // { name: 'Festo', logo: 'assets/clients/festo.png' },
-    // { name: 'Maxeon', logo: 'assets/clients/maxeon.png' },
-    // { name: 'PIMS', logo: 'assets/clients/pims.png' },
-    // { name: 'Intuitive Surgical', logo: 'assets/clients/intuitive-surgical.png' },
-    // { name: 'Fevisa', logo: 'assets/clients/fevisa.png' },
-    // { name: 'GAF Energy', logo: 'assets/clients/gaf-energy.png' },
-    // { name: 'Flextronics', logo: 'assets/clients/flextronics.png' },
-    // { name: 'Furukawa Electric Group', logo: 'assets/clients/furukawa.png' },
-    // { name: 'Jabil', logo: 'assets/clients/jabil.png' },
-    // { name: 'Allegion', logo: 'assets/clients/allegion.png' }
+  ];
+
+  spotlights: ClientSpotlight[] = [
+    {
+      name: 'R&I Automation',
+      summary: 'An automation and machine building partner facing engineering capacity constraints across multiple simultaneous projects.',
+      pains: [
+        'Internal engineering team at full capacity',
+        'Projects delayed due to unavailable mechanical design resources',
+        'Difficulty hiring experienced mechanical designers quickly',
+        'Needed temporary engineering capacity without permanent payroll cost',
+        'Large CAD backlog — 3D models, assemblies, drawings, BOMs and detailing',
+        'Required support for new machine development and machine variants',
+        'Frequent engineering changes consuming senior engineers\' time',
+        'Needed production-ready documentation while internal team focused on higher-value engineering',
+        'Needed a partner who could work across time zones with clear communication',
+      ],
+      solutions: [
+        'Deployed extended engineering team to absorb overflow capacity',
+        'Delivered 3D CAD, assemblies and production-ready drawings on schedule',
+        'Cleared CAD backlog while supporting new machine variants in parallel',
+        'Took ownership of documentation and BOMs, freeing senior engineers for core design work',
+        'Maintained clear cross-timezone communication and consistent engineering standards',
+        'Provided scalable, on-demand capacity without adding to permanent headcount'
+      ]
+    }
   ];
 }

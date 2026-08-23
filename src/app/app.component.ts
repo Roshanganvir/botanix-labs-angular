@@ -3,9 +3,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
 import { IndustriesComponent } from './components/industries/industries.component';
+import { ChallengesComponent } from './components/challenges/challenges.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { AboutComponent } from './components/about/about.component';
+import { WorkflowComponent } from './components/workflow/workflow.component';
 import { ProcessComponent } from './components/process/process.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
 import { FaqComponent } from './components/faq/faq.component';
@@ -22,9 +24,11 @@ import { WhatsappFloatComponent } from './components/whatsapp-float/whatsapp-flo
     HeroComponent,
     ServicesComponent,
     IndustriesComponent,
+    ChallengesComponent,
     ClientsComponent,
     RatingsComponent,
     AboutComponent,
+    WorkflowComponent,
     ProcessComponent,
     WhyUsComponent,
     FaqComponent,

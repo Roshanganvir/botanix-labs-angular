@@ -18,8 +18,8 @@ interface MvBlock {
 })
 export class ProcessComponent {
   values: string[] = [
-    'Loyalty', 'Professionalism', 'Trust', 'Respect',
-    'Responsibility', 'Integrity', 'Honesty', 'Gratitude'
+     'Professionalism', 'Trust', 'Respect',
+    'Responsibility', 'Integrity', 'Honesty'
   ];
 
   mission: MvBlock = {

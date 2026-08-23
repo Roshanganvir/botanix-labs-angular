@@ -18,17 +18,47 @@
 }
 
 .team-image {
+  position: relative;
   height: 280px;
   background-size: cover;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.05);
   filter: grayscale(15%);
   transition: filter 0.25s ease, transform 0.4s ease;
+  overflow: hidden;
 }
 
 .team-card:hover .team-image {
   filter: grayscale(0%);
   transform: scale(1.04);
+}
+
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-overlay p {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-height: 100%;
+  overflow-y: auto;
+  text-align: left;
 }
 
 .team-body {

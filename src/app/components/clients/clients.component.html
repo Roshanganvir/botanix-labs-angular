@@ -11,5 +11,28 @@
         <img [src]="client.logo" [alt]="client.name" loading="lazy" />
       </div>
     </div>
+
+    <div class="spotlight" appReveal *ngFor="let spot of spotlights">
+      <div class="spotlight-head">
+        <span class="mono spotlight-tag">CLIENT SPOTLIGHT</span>
+        <h3>{{ spot.name }}</h3>
+        <p class="spotlight-sub">{{ spot.summary }}</p>
+      </div>
+
+      <div class="spotlight-grid">
+        <div class="spotlight-col">
+          <span class="mono col-label">THEIR CHALLENGES</span>
+          <ul class="pain-list">
+            <li *ngFor="let pain of spot.pains">{{ pain }}</li>
+          </ul>
+        </div>
+        <div class="spotlight-col">
+          <span class="mono col-label">HOW BOTANIX HELPED</span>
+          <ul class="solution-list">
+            <li *ngFor="let sol of spot.solutions">{{ sol }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

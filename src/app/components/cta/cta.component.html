@@ -8,7 +8,11 @@
 
     <div class="team-grid">
       <div class="team-card" *ngFor="let member of team">
-        <div class="team-image" [style.background-image]="'url(' + member.image + ')'"></div>
+        <div class="team-image" [style.background-image]="'url(' + member.image + ')'">
+          <div class="team-overlay">
+            <p>{{ member.bio }}</p>
+          </div>
+        </div>
         <div class="team-body">
           <h4>{{ member.name }}</h4>
           <span class="mono">{{ member.role }}</span>

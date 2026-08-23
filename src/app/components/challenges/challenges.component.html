@@ -1,0 +1,17 @@
+<section class="section" id="challenges">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <!-- <span class="eyebrow">§ 03 — Your Challenge, Our Response</span> -->
+      <h2>YOUR CHALLENGE OUR ENGINEERING RESPONSE</h2>
+      <p>From automation and machine builders to pharma, FMCG, automotive and infrastructure projects, we provide engineering capacity and design solutions around your specific production challenges.</p>
+    </div>
+
+    <div class="challenge-grid" appReveal>
+      <div class="challenge-card" *ngFor="let item of challenges">
+        <span class="trigger-tag mono">{{ item.trigger }}</span>
+        <h4>{{ item.question }}</h4>
+        <p>{{ item.solution }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.challenge-card {
+  background: var(--ink);
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background .25s ease;
+}
+
+.challenge-card:hover {
+  background: var(--ink-soft);
+}
+
+.trigger-tag {
+  display: inline-block;
+  width: fit-content;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--accent, #d97a3f);
+  border: 1px solid rgba(217, 122, 63, 0.4);
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+.challenge-card h4 {
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.challenge-card p {
+  font-size: 13.5px;
+  color: var(--muted, rgba(255, 255, 255, 0.65));
+  line-height: 1.5;
+}
+
+@media (max-width: 980px) {
+  .challenge-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .challenge-grid { grid-template-columns: 1fr; }
+}
