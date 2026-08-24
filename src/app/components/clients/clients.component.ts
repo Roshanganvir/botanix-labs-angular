@@ -2,16 +2,19 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RevealDirective } from '../../shared/reveal/reveal.directive';
 
-interface Client {
-  name: string;
-  logo: string;
-}
-
 interface ClientSpotlight {
   name: string;
+  logo: string;
   summary: string;
   pains: string[];
   solutions: string[];
+}
+
+interface ManufacturingPartner {
+  name: string;
+  // logo: string;
+  summary: string;
+  capabilities: string[];
 }
 
 @Component({
@@ -22,14 +25,10 @@ interface ClientSpotlight {
   styleUrl: './clients.component.scss'
 })
 export class ClientsComponent {
-  clients: Client[] = [
-    { name: 'R&I Automation', logo: 'assets/clients/ri-automation.png' },
-    // { name: 'Festo', logo: 'assets/clients/festo.png' },
-  ];
-
   spotlights: ClientSpotlight[] = [
     {
       name: 'R&I Automation',
+      logo: 'assets/clients/ri-automation.png',
       summary: 'An automation and machine building partner facing engineering capacity constraints across multiple simultaneous projects.',
       pains: [
         'Internal engineering team at full capacity',
@@ -52,4 +51,16 @@ export class ClientsComponent {
       ]
     }
   ];
+
+  partner: ManufacturingPartner = {
+    name: 'Manufacturing Partner Name',
+    // logo: 'assets/clients/ri-automation.png',
+    summary: 'A brief description of the manufacturing partnership — what they produce, where they operate, and how Botanix supports their production and engineering needs.',
+    capabilities: [
+      'CNC Machining',
+      'Sheet Metal Fabrication',
+      'Precision Assembly',
+      'Quality Inspection'
+    ]
+  };
 }

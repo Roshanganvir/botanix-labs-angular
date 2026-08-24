@@ -1,0 +1,43 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base plate -->
+  <rect x="20" y="118" width="160" height="10" fill="none" stroke="#4a6a8a" stroke-width="1.5"/>
+
+  <!-- Robotic arm base -->
+  <circle cx="60" cy="118" r="10" fill="none" stroke="#4a6a8a" stroke-width="1.5"/>
+  <circle cx="60" cy="118" r="3" fill="#c17f3e"/>
+
+  <!-- Arm segment 1 -->
+  <line x1="60" y1="108" x2="60" y2="78" stroke="#4a6a8a" stroke-width="1.5"/>
+
+  <!-- Elbow joint -->
+  <circle cx="60" cy="78" r="6" fill="none" stroke="#4a6a8a" stroke-width="1.5"/>
+
+  <!-- Arm segment 2 -->
+  <line x1="66" y1="74" x2="108" y2="52" stroke="#4a6a8a" stroke-width="1.5"/>
+
+  <!-- Wrist joint -->
+  <circle cx="108" cy="52" r="5" fill="none" stroke="#4a6a8a" stroke-width="1.5"/>
+
+  <!-- Gripper -->
+  <line x1="112" y1="48" x2="126" y2="36" stroke="#4a6a8a" stroke-width="1.5"/>
+  <line x1="118" y1="55" x2="132" y2="45" stroke="#4a6a8a" stroke-width="1.5"/>
+  <line x1="126" y1="36" x2="134" y2="42" stroke="#c17f3e" stroke-width="1.5"/>
+  <line x1="132" y1="45" x2="134" y2="42" stroke="#c17f3e" stroke-width="1.5"/>
+
+  <!-- Conveyor / part being handled -->
+  <rect x="140" y="34" width="18" height="14" rx="1" fill="none" stroke="#c17f3e" stroke-width="1.5"/>
+
+  <!-- Gear motif (automation) -->
+  <g transform="translate(150,100)">
+    <circle r="14" fill="none" stroke="#4a6a8a" stroke-width="1.5"/>
+    <circle r="4" fill="none" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="0" y1="-14" x2="0" y2="-19" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="0" y1="14" x2="0" y2="19" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="-14" y1="0" x2="-19" y2="0" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="14" y1="0" x2="19" y2="0" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="-10" y1="-10" x2="-13" y2="-13" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="10" y1="10" x2="13" y2="13" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="10" y1="-10" x2="13" y2="-13" stroke="#4a6a8a" stroke-width="1.5"/>
+    <line x1="-10" y1="10" x2="-13" y2="13" stroke="#4a6a8a" stroke-width="1.5"/>
+  </g>
+</svg>

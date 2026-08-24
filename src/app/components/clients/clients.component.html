@@ -6,16 +6,10 @@
       <p>From local partners to international manufacturers, we deliver engineering excellence our clients rely on.</p>
     </div>
 
-    <div class="client-grid" appReveal>
-      <div class="client-item" *ngFor="let client of clients">
-        <img [src]="client.logo" [alt]="client.name" loading="lazy" />
-      </div>
-    </div>
-
     <div class="spotlight" appReveal *ngFor="let spot of spotlights">
       <div class="spotlight-head">
         <span class="mono spotlight-tag">CLIENT SPOTLIGHT</span>
-        <h3>{{ spot.name }}</h3>
+        <img [src]="spot.logo" [alt]="spot.name" class="spotlight-logo" loading="lazy" />
         <p class="spotlight-sub">{{ spot.summary }}</p>
       </div>
 
@@ -32,6 +26,22 @@
             <li *ngFor="let sol of spot.solutions">{{ sol }}</li>
           </ul>
         </div>
+      </div>
+    </div>
+
+    <!-- Manufacturing Partner Card -->
+       <!-- Manufacturing Partner Card -->
+    <div class="partner-card" appReveal>
+      <div class="partner-head">
+        <!-- <span class="mono partner-tag">MANUFACTURING PARTNER</span> -->
+        <h3 class="partner-name">{{ partner.name }}</h3>
+      </div>
+      <p class="partner-desc">{{ partner.summary }}</p>
+      <div class="partner-caps">
+        <span class="mono col-label">CAPABILITIES</span>
+        <ul class="cap-list">
+          <li *ngFor="let cap of partner.capabilities">{{ cap }}</li>
+        </ul>
       </div>
     </div>
   </div>

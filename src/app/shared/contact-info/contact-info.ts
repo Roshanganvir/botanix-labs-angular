@@ -15,7 +15,7 @@ export const CALL_NUMBER = '+918483051756';
 export const CALL_NUMBER_DISPLAY = '+91-8483051756';
 
 // Where enquiries should actually land (used by FormSubmit — free, no backend needed).
-export const ENQUIRY_EMAIL = 'roshanganvir13@gmail.com';
+export const ENQUIRY_EMAIL = 'info@botanixlabs.in';
 
 // Pre-built WhatsApp deep link.
 export const WHATSAPP_LINK =

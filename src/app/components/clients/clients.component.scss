@@ -1,29 +1,3 @@
-.client-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--line-strong);
-  border: 1px solid var(--line-strong);
-  margin-top: 10px;
-}
-
-.client-item {
-  background: var(--white);
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 28px;
-}
-
-.client-item img {
-  max-width: 100%;
-  max-height: 90px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
 /* ---- Client Spotlight ---- */
 .spotlight {
   margin-top: 60px;
@@ -42,10 +16,14 @@
   display: inline-block;
 }
 
-.spotlight-head h3 {
+.spotlight-logo {
+  display: block;
   margin-top: 14px;
-  font-size: 26px;
-  letter-spacing: 0.01em;
+  max-width: 220px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .spotlight-sub {
@@ -111,11 +89,80 @@
 }
 
 @media (max-width: 980px) {
-  .client-grid { grid-template-columns: repeat(3, 1fr); }
   .spotlight-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
 @media (max-width: 640px) {
-  .client-grid { grid-template-columns: repeat(2, 1fr); }
   .spotlight { padding: 32px 24px; }
+}
+
+/* ---- Manufacturing Partner Card ---- */
+.partner-card {
+  margin-top: 32px;
+  border: 1px solid var(--line-strong);
+  padding: 44px 40px;
+  background: var(--white, #fff);
+}
+
+.partner-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.partner-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink, #1a1a1a);
+  margin: 0 0 0 14px;
+}
+.partner-tag {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent, #d97a3f);
+  border: 1px solid rgba(217, 122, 63, 0.4);
+  padding: 4px 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.partner-logo {
+  max-width: 180px;
+  max-height: 56px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.partner-desc {
+  margin-top: 18px;
+  font-size: 14.5px;
+  max-width: 680px;
+  color: var(--muted, rgba(0, 0, 0, 0.6));
+  line-height: 1.5;
+}
+
+.partner-caps {
+  margin-top: 28px;
+}
+
+.cap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cap-list li {
+  font-size: 13px;
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  color: var(--ink, #1a1a1a);
+}
+
+@media (max-width: 640px) {
+  .partner-card { padding: 32px 24px; }
 }
