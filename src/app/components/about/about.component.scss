@@ -12,10 +12,13 @@
 }
 
 .case-image {
-  height: 220px;
-  background-size: cover;
+  height: 260px;
+  background-size: contain;      // cover की जगह contain
+  background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;                 // थोड़ी breathing room के लिए
+  box-sizing: border-box;
 }
 
 .case-body {

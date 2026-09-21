@@ -109,6 +109,9 @@
   align-items: center;
   flex-wrap: wrap;
 }
+#clients {
+  padding-bottom: 20px; // adjust value as needed, was likely default 100-120px
+}
 
 .partner-name {
   font-size: 20px;
