@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
+import { EquipmentComponent } from './sections/equipment/equipment.component';
 import { IndustriesComponent } from './components/industries/industries.component';
 import { ChallengesComponent } from './components/challenges/challenges.component';
 import { ClientsComponent } from './components/clients/clients.component';
@@ -20,23 +21,24 @@ import { WhatsappFloatComponent } from './components/whatsapp-float/whatsapp-flo
   selector: 'app-root',
   standalone: true,
   imports: [
-    HeaderComponent,
-    HeroComponent,
-    ServicesComponent,
-    IndustriesComponent,
-    ChallengesComponent,
-    ClientsComponent,
-    RatingsComponent,
-    AboutComponent,
-    WorkflowComponent,
-    ProcessComponent,
-    WhyUsComponent,
-    FaqComponent,
-    CtaComponent,
-    ContactComponent,
-    FooterComponent,
-    WhatsappFloatComponent
-  ],
+  HeaderComponent,
+  HeroComponent,
+  ServicesComponent,
+  EquipmentComponent,
+  IndustriesComponent,
+  ChallengesComponent,
+  ClientsComponent,
+  RatingsComponent,
+  AboutComponent,
+  WorkflowComponent,
+  ProcessComponent,
+  WhyUsComponent,
+  FaqComponent,
+  CtaComponent,
+  ContactComponent,
+  FooterComponent,
+  WhatsappFloatComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

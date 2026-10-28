@@ -1,0 +1,64 @@
+<section class="section" id="equipment">
+  <div class="wrap">
+    <div class="section-head" appReveal>
+      <h2>Equipment Catalogue</h2>
+    </div>
+
+    <div class="filter-bar">
+      <button
+        *ngFor="let g of groups"
+        class="chip"
+        [class.active]="g === activeGroup"
+        (click)="setGroup(g)">
+        {{ g }}
+      </button>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card" *ngFor="let m of visible; let i = index">
+        <div class="service-img">
+          <img [src]="m.image" [alt]="m.title" loading="lazy" />
+        </div>
+        <span class="service-num">{{ (i + 1) | number:'2.0-0' }} — {{ m.category }}</span>
+        <h3>{{ m.title }}</h3>
+        <ul class="highlights">
+          <li *ngFor="let h of m.highlights">{{ h }}</li>
+        </ul>
+        <button class="eq-btn" (click)="open(m)">View Specs →</button>
+      </div>
+    </div>
+
+    <div class="more-wrap" *ngIf="filtered.length > pageSize">
+      <span class="count">Showing {{ visible.length }} of {{ filtered.length }}</span>
+      <button class="eq-btn dark" *ngIf="visibleCount < filtered.length" (click)="showMore()">
+        Show more
+      </button>
+      <button class="eq-btn" *ngIf="visibleCount >= filtered.length" (click)="showLess()">
+        Show less
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" *ngIf="selected" (click)="close()">
+    <div class="modal" (click)="$event.stopPropagation()" role="dialog" aria-modal="true">
+      <button class="modal-close" (click)="close()" aria-label="Close">✕</button>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img [src]="selected.image" [alt]="selected.title" />
+        </div>
+        <div class="modal-info">
+          <h3>{{ selected.title }}</h3>
+          <table>
+            <tr><th>Technical Parameter</th><th>Specification</th></tr>
+            <tr *ngFor="let s of selected.specs.concat(commonSpecs)">
+              <td>{{ s.label }}</td>
+              <td>{{ s.value }}</td>
+            </tr>
+          </table>
+          <p class="note">Specifications may vary by model. Contact us for exact details.</p>
+          <a href="#contact" class="eq-btn dark" (click)="close()">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
