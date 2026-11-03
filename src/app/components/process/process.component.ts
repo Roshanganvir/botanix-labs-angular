@@ -32,7 +32,7 @@ export class ProcessComponent {
   vision: MvBlock = {
     tag: 'VISION',
     title: 'Vision',
-    desc: 'To become a globally leading company in the development of high-technology automated systems, tailored to the process needs of each of our clients.',
+    desc: 'To become a global leading company in the development of high-technology automated systems, tailored to the process needs of each of our clients.',
     image: 'assets/values/vision.jpg'
   };
 }
