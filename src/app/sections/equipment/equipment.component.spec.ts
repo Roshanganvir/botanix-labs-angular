@@ -94,4 +94,16 @@ describe('EquipmentComponent', () => {
     component.onImgError('assets/equipment/x.webp');
     expect(component.failed['assets/equipment/x.webp']).toBeTrue();
   });
+
+  it('requestQuote opens WhatsApp with machine details and closes modal', () => {
+    const spy = spyOn(window, 'open');
+    const m = component.machines[0];
+    component.open(m);
+    component.requestQuote();
+
+    const url = spy.calls.mostRecent().args[0] as string;
+    expect(url).toContain('https://wa.me/');
+    expect(decodeURIComponent(url)).toContain(m.title);
+    expect(component.selected).toBeNull();
+  });
 });

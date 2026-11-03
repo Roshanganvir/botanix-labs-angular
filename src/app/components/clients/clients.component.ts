@@ -35,7 +35,7 @@ export class ClientsComponent {
         'Projects delayed due to unavailable mechanical design resources',
         'Difficulty hiring experienced mechanical designers quickly',
         'Needed temporary engineering capacity without permanent payroll cost',
-        'Large CAD backlog — 3D models, assemblies, drawings, BOMs and detailing',
+        'Large CAD backlog-3D models, assemblies, drawings, BOMs and detailing',
         'Required support for new machine development and machine variants',
         'Frequent engineering changes consuming senior engineers\' time',
         'Needed production-ready documentation while internal team focused on higher-value engineering',
@@ -55,7 +55,7 @@ export class ClientsComponent {
   partner: ManufacturingPartner = {
     name: 'Manufacturing Partner Name',
     // logo: 'assets/clients/ri-automation.png',
-    summary: 'A brief description of the manufacturing partnership — what they produce, where they operate, and how Botanix supports their production and engineering needs.',
+    summary: 'A brief description of the manufacturing partnership-what they produce, where they operate, and how Botanix supports their production and engineering needs.',
     capabilities: [
       'CNC Machining',
       'Sheet Metal Fabrication',

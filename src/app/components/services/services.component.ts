@@ -21,7 +21,7 @@ services: ServiceItem[] = [
   {
     num: '01',
     title: '3D CAD Services & Technical Drawings',
-    desc: 'From initial sketch to production-ready, manufacturable models — plus precise 2D technical drawings and documentation prepared for accurate, efficient manufacturing.',
+    desc: 'From initial sketch to production-ready, manufacturable models-plus precise 2D technical drawings and documentation prepared for accurate, efficient manufacturing.',
     image: 'assets/services/cad_services_icon_v2_1.png'
   },
   {
@@ -51,7 +51,7 @@ services: ServiceItem[] = [
   {
     num: '06',
     title: 'Industrial Automation',
-    desc: 'End-to-end automation engineering — from control system design to PLC integration — built to streamline production lines and reduce manual intervention.',
+    desc: 'End-to-end automation engineering-from control system design to PLC integration-built to streamline production lines and reduce manual intervention.',
     image: 'assets/services/industrial_automation_icon_v2_7.png'
   }
 ];

@@ -1,7 +1,7 @@
 import { Component, HostListener, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RevealDirective } from '../../shared/reveal/reveal.directive';
-
+import { WHATSAPP_NUMBER } from '../../shared/contact-info/contact-info';
 interface Spec { label: string; value: string; }
 
 // Naya category add karna ho to yaha bhi likho aur neeche groupMap me bhi.
@@ -316,6 +316,38 @@ export class EquipmentComponent implements OnDestroy {
     this.lastTrigger?.focus({ preventScroll: true });
     this.lastTrigger = null;
   }
+
+  // ---- WhatsApp quote ----
+ requestQuote() {
+  const m = this.selected;
+  if (!m) return;
+
+  const lines: string[] = [
+    'Hello Botanix Labs, I would like to request a quotation for the following machine:',
+    '',
+    `*${m.title}*`,
+    `Category: ${m.category}`,
+    `Catalogue No: ${String(this.numberOf(m)).padStart(2, '0')}`,
+    '',
+    '*Specifications:*',
+    ...this.modalSpecs.map(s => `- ${s.label}: ${s.value}`),
+    '',
+    '*My details:*',
+    'Name: ',
+    'Company: ',
+    'City: ',
+    'Product to be filled: ',
+    'Required quantity: ',
+    '',
+    'Please share price, lead time and final configuration. Thank you.'
+  ];
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+  // Click handler ke andar hi open karo, warna popup blocker rok sakta hai
+  window.open(url, '_blank', 'noopener');
+  this.close();
+}
 
   @HostListener('document:keydown.escape')
   onEscape() {
