@@ -318,7 +318,37 @@ export class EquipmentComponent implements OnDestroy {
   }
 
   // ---- WhatsApp quote ----
- requestQuote() {
+//  requestQuote() {
+//   const m = this.selected;
+//   if (!m) return;
+
+//   const lines: string[] = [
+//     'Hello Botanix Labs, I would like to request a quotation for the following machine:',
+//     '',
+//     `*${m.title}*`,
+//     `Category: ${m.category}`,
+//     `Catalogue No: ${String(this.numberOf(m)).padStart(2, '0')}`,
+//     '',
+//     '*Specifications:*',
+//     ...this.modalSpecs.map(s => `- ${s.label}: ${s.value}`),
+//     '',
+//     '*My details:*',
+//     'Name: ',
+//     'Company: ',
+//     'City: ',
+//     'Product to be filled: ',
+//     'Required quantity: ',
+//     '',
+//     'Please share price, lead time and final configuration. Thank you.'
+//   ];
+
+//   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+//   // Click handler ke andar hi open karo, warna popup blocker rok sakta hai
+//   window.open(url, '_blank', 'noopener');
+//   this.close();
+// }
+requestQuote() {
   const m = this.selected;
   if (!m) return;
 
@@ -328,9 +358,6 @@ export class EquipmentComponent implements OnDestroy {
     `*${m.title}*`,
     `Category: ${m.category}`,
     `Catalogue No: ${String(this.numberOf(m)).padStart(2, '0')}`,
-    '',
-    '*Specifications:*',
-    ...this.modalSpecs.map(s => `- ${s.label}: ${s.value}`),
     '',
     '*My details:*',
     'Name: ',
@@ -349,6 +376,7 @@ export class EquipmentComponent implements OnDestroy {
   this.close();
 }
 
+
   @HostListener('document:keydown.escape')
   onEscape() {
     if (this.selected) this.close();
@@ -365,6 +393,8 @@ export class EquipmentComponent implements OnDestroy {
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
   }
+
+  
 
   ngOnDestroy() {
     // modal khula ho aur page change ho jaye to scroll lock na reh jaye

@@ -32,7 +32,7 @@ services: ServiceItem[] = [
   },
   {
     num: '03',
-    title: 'Prototyping Development',
+    title: ' Industrial Machinery & SPM Solutions',
     desc: 'Rapid prototyping that lets you test, iterate and validate designs quickly, catching flaws early before committing to production.',
     image: 'assets/services/prototyping_icon_v2_3.png'
   },
