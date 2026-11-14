@@ -363,7 +363,7 @@ requestQuote() {
     'Name: ',
     'Company: ',
     'City: ',
-    'Product to be filled: ',
+   
     'Required quantity: ',
     '',
     'Please share price, lead time and final configuration. Thank you.'
